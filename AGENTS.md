@@ -1,29 +1,39 @@
 # Soneverse Agent Instructions
 
-## Persönliches Wiki
+## Personal wiki
 
-Das persönliche Obsidian-Wiki liegt extern unter:
+The Obsidian wiki is stored at a user-specific local path. Read
+`soneverse.local.properties` in the repository root first. This file is
+intentionally not versioned.
 
-`D:\\projects\\soneverse_wiki`
+When a task concerns ideas, concepts, decisions, project knowledge, or the
+second-brain workflow, inspect the configured wiki vault first. Relevant entry
+points are:
 
-Wenn eine Aufgabe Ideen, Konzepte, Entscheidungen, Projektwissen oder den
-Second-Brain-Workflow betrifft, prüfe zuerst den Wiki-Vault. Relevante
-Einstiegspunkte sind:
+- `README.md`
+- `wiki/_SYSTEM.md`
+- `wiki/LLM-Wiki-Workflow.md`
+- `01-Projects/Soneverse/Soneverse.md`
 
-- `D:\\projects\\soneverse_wiki\\README.md`
-- `D:\\projects\\soneverse_wiki\\wiki\\_SYSTEM.md`
-- `D:\\projects\\soneverse_wiki\\wiki\\LLM-Wiki-Workflow.md`
-- `D:\\projects\\soneverse_wiki\\01-Projects\\Soneverse\\Soneverse.md`
+## Wiki change rules
 
-## Regeln für Wiki-Änderungen
+- Never overwrite raw sources under `sources/`.
+- Document new knowledge as Markdown with sources or dates where possible.
+- Check existing pages before creating new ones.
+- Mark contradictions instead of silently correcting them.
+- Never store passwords, API keys, or other secrets.
+- Commit wiki changes separately from the code repository.
+- Summarize wiki changes before committing them.
 
-- Rohquellen unter `sources\\` niemals überschreiben.
-- Neue Erkenntnisse als Markdown und mit Quellen bzw. Datum dokumentieren.
-- Bestehende Seiten vor dem Anlegen neuer Seiten prüfen.
-- Widersprüche markieren, nicht stillschweigend korrigieren.
-- Keine Passwörter, API-Keys oder sonstigen Secrets speichern.
-- Änderungen am Wiki separat vom Code-Repository committen.
-- Wiki-Änderungen vor dem Commit kurz zusammenfassen.
+The wiki is not an automatic background store. Read or change it only when
+the current task concerns the second brain or project knowledge.
 
-Der Wiki-Vault ist kein automatischer Hintergrundspeicher. Lies und ändere
-ihn nur, wenn die aktuelle Aufgabe das Second Brain oder Projektwissen betrifft.
+## Git safety
+
+- Never run `git add`, `git commit`, `git push`, `git pull`, merge, rebase, or
+  create/update a pull request automatically.
+- Never change a remote repository or publish files without an explicit,
+  current user instruction for that exact action.
+- After editing files, show the user the changes and leave them uncommitted.
+- A request to implement or edit files does not imply permission to commit or
+  push them.
